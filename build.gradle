@@ -1,0 +1,25 @@
+group 'com.bskyb.internettv.spike'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+def jerseyVersion = '2.23.1'
+
+dependencies {
+    compile "org.glassfish.jersey.core:jersey-server:$jerseyVersion"
+    compile "org.glassfish.jersey.core:jersey-client:$jerseyVersion"
+    compile "org.projectlombok:lombok:1.16.10"
+
+
+    testCompile 'junit:junit:4.11'
+    testCompile "org.mockito:mockito-all:1.10.19"
+    testCompile "org.assertj:assertj-core:3.5.2"
+    testCompile "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:$jerseyVersion"
+    testCompile "io.dropwizard:dropwizard-testing:0.9.3"
+
+}
